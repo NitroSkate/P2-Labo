@@ -15,21 +15,21 @@
                     <legend>Personal Data</legend>
                     <div>
                         <label for="dui">DUI:</label>
-                        <input type="text" name="dui" id="dui" placeholder="04813412-8" required>
+                        <input type="text" name="dui" id="dui" placeholder="04813412-8" pattern="[0-9]{8}-[0-9]{1}" required>
                         <label for="fn">First Name:</label>
                         <input type="text" name="fn" id="fn" placeholder="First Name" required>
                         <label for="ln">Last Name:</label>
                         <input type="text" name="ln" id="ln" placeholder="Last Name" required>
                         <label for="gen">Gender:</label>
-                        <input type="radio" name="gen" id="gen" required>M
-                        <input type="radio" name="gen" id="gen" required>F
+                        <input type="radio" name="gen" id="gen" checked>M
+                        <input type="radio" name="gen" id="gen">F
                     </div>
                     <br>
                     <div>
                         <label for="cn">Contact Number:</label>
-                        <input type="text" name="cn" id="cn">
+                        <input type="text" name="cn" id="cn" pattern="[0-9]{4}-[0-9]{4}" required>
                         <label for="bd">Birthdate:</label>
-                        <input type="date" name="bd" id="bd" required>
+                        <input type="date" name="bd" id="bd" min="2000-01-01" max="2018-12-31" required>
                         <label for="cs">Civil Status: </label>
                         <select name="cn" required>
                             <option value="cn">Single</option>
@@ -47,7 +47,7 @@
             <section>
                 <fieldset>
                     <legend>Work Experience</legend>
-                    <textarea rows="10"cols="225" placeholder="Experience"></textarea>
+                    <textarea rows="10"cols="225" placeholder="Experience" required></textarea>
                 </fieldset>
             </section>
         </article>
@@ -57,7 +57,7 @@
             <section>
                 <fieldset>
                         <legend>Academic Training</legend>
-                        <textarea rows="10"cols="225" placeholder="Academic Training"></textarea>
+                        <textarea rows="10"cols="225" placeholder="Academic Training" required></textarea>
                 </fieldset>
             </section>
         </article>
